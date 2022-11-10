@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
+<TestRun>
+  <FailedTests>
+    <FailedTest id="1">
+      <Name>TestCandidate::testExamId</Name>
+      <FailureType>Assertion</FailureType>
+      <Location>
+        <File>TestCandidate.cpp</File>
+        <Line>50</Line>
+      </Location>
+      <Message>assertion failed
+- Expression: 90 == s1-&gt;getExamCenter()
+</Message>
+    </FailedTest>
+    <FailedTest id="2">
+      <Name>TestCandidate::testCandidatename</Name>
+      <FailureType>Assertion</FailureType>
+      <Location>
+        <File>TestCandidate.cpp</File>
+        <Line>56</Line>
+      </Location>
+      <Message>assertion failed
+- Expression: &quot;Sunita&quot; == Student::maxName
+</Message>
+    </FailedTest>
+    <FailedTest id="3">
+      <Name>TestCandidate::testClassObtained</Name>
+      <FailureType>Assertion</FailureType>
+      <Location>
+        <File>TestStudent.cpp</File>
+        <Line>62</Line>
+      </Location>
+      <Message>assertion failed
+- Expression: &apos;A&apos; == s1-&gt;getClassObtained()
+</Message>
+    </FailedTest>
+  </FailedTests>
+  <SuccessfulTests></SuccessfulTests>
+  <Statistics>
+    <Tests>3</Tests>
+    <FailuresTotal>3</FailuresTotal>
+    <Errors>0</Errors>
+    <Failures>3</Failures>
+  </Statistics>
+</TestRun>
