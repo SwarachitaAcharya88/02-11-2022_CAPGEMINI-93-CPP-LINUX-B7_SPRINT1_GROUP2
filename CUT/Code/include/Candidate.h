@@ -1,23 +1,24 @@
 #ifndef CANDIDATE_H
 #define CANDIDATE_H
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 class Candidate {
+	protected:
+		string CandidateId;
+		string Candidatename;
+		string ExamId;
 	public:
-		Candidate();
-		Candidate(int Id,string name);
-		~Candidate();
-		void setId(int Id);
-		int getId();
-		void setName(string name);
-		string getName();
-		void displayCandidate();
-		void show(vector<Candidate> Candidate);
-		
-	private:
-		int Id;
-		string name;
-	
+		void show(vector<Candidate> Candidates);
+		Candidate(){};
+		Candidate(string CandidateId,string Candidatename,string ExamId);
+		~Candidate(){};
+		string getCandidateId();
+		string getCandidatename();
+		string getExamId();
+		virtual void displayCandidate() const;
+
 };
 #endif

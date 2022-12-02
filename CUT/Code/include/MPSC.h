@@ -1,24 +1,23 @@
 #ifndef MPSC_H
 #define MPSC_H
+#include <Candidate.h>
 
 using namespace std;
-class MPSC{
+
+class MPSC:public Candidate{
 	public:
-		MPSC();
-		MPSC(string StartDate,string endDate,int attemptNo){
-			this->StartDate=startDate;
-			this->endDate=endDate;
-			this->attemptNo=attemptNo;
-		}
-		~MPSC();
-		void setstartDate(string startDate);
+		MPSC(){};
+		MPSC(string CandidateId,string Candidatename,string ExamId,string StartDate,string endDate,int attemptNo);
+			
+		
+		~MPSC(){};
 		string getstartDate();
-		void setendDate(string endDdate);
 		string getendDate();
-		void setattemptNo(int attemptNo);
 		int getattemptNo();
-		virtual void displayMPSC();
+		void displayCandidate() const;
 	private:
-		string startDate,string endDate,int attemptNo;
+		string startDate;
+		string endDate;
+		int attemptNo;
 };
 #endif

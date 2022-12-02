@@ -1,19 +1,17 @@
 #ifndef NEET_H
 #define NEET_H
+#include <Candidate.h>
 
 using namespace std;
 
-class NEET{
+class NEET:public Candidate{
 	public:
-		NEET();
-		NEET(int YearofPassing){
-			this->YearofPassing=YearofPassing;
-		}
-		~NEET();
-		void setYearofPassing(int YearofPassing);
+		NEET(){};
+		NEET(string CandidateId,string Candidatename,string ExamId,int YearofPassing);
+		~NEET(){};
 		int getYearofPassing();
-		virtual void displayNEET();
+		void displayCandidate() const;
 	private:
 		int YearofPassing;
 };
-#endif;
+#endif

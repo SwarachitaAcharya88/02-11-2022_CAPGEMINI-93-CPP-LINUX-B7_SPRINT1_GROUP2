@@ -1,26 +1,55 @@
-#ifndef ExamCenter_H
+/*#ifndef ExamCenter_H
 #define ExamCenter_H
+#include <array>
+#define max 50;
 
 using namespace std;
 
 class ExamCenter{
 	public:
-		ExamCenter(string EX001,string EX002,string EX003,string EX004){
-			this->EX001=EX001;
-			this->EX002=EX002;
-			this->EX003=EX003;
-			this->EX004=EX004;
-		}
-		~ExamCenter();
-		void setEX001(string EX001);
-		string getEX001();
-		void setEX002(string EX002);
-		string getEX002();
-		void setEX003(string EX003);
-		string getEX003();
-		void setEX004(string EX004);
-		string getEX004();
+		ExamCenter(){};
+		int readInputFile(const char* InputFile);
 	private:
-		string EX001,string EX002,string EX003,string EX004;
+		extern array <ExamCenter1,MAX> EX001;
+		extern array <ExamCenter2,MAX> EX002;
+		extern array <ExamCenter3,MAX> EX003;
+		extern array <ExamCenter4,MAX> EX004;
+		
 };
-#endif;
+
+class Thread{
+	public:
+		void thread1();
+		void thread2();
+		void thread3();
+		void thread4();
+};
+
+#endif;*/
+#ifndef ExamCenter_H
+#define ExamCenter_H
+#include <array>
+#define max 50;
+
+using namespace std;
+
+class ExamCenter{
+        public:
+                ExamCenter(){};
+                int readInputFile(const char* InoutFile);
+        private:
+                extern array <ExamCenter1,MAX> EX001;
+                extern array <ExamCenter2,MAX> EX002;
+                extern array <ExamCenter3,MAX> EX003;
+                extern array <ExamCenter4,MAX> EX004;
+
+};
+
+class Thread{
+        public:
+                void thread1();
+                void thread2();
+                void thread3();
+                void thread4();
+};
+#endif

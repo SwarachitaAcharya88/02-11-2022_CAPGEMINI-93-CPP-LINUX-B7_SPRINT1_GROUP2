@@ -1,25 +1,22 @@
 #ifndef UPSC_H
 #define UPSC_H
+#include <Candidate.h>
 
 using namespace std;
 
-class UPSC{
+class UPSC:public Candidate{
 	public:
-		UPSC();
-		UPSC(string startDate,string endDate,string State){
-			this->startDate=startDate;
-			this->endDate=endDate;
-			this->State =State;
-		}
+		UPSC(){};
+		UPSC(string CandidateId,string Candidatename,string ExamId,string startDate,string endDate,string state);
+			
 		~UPSC();
-		void setstartDate(string startDate);
 		string getstartDate();
-		void setendDate(string endDate);
 		string getendDate();
-		void setState(string State);
-		string getState();
-		virtual void dispalyUPSC();
+		string getstate();
+		void displayCandidate() const;
 	private:
-		string startDate,string endDate,string State;
+		string startDate;
+		string endDate;
+		string state;
 };
-#endif;
+#endif
