@@ -1,30 +1,25 @@
 #include <iostream>
-#include <string>
-#include <vector>
-#include <iterator>
+#include <UPSC.h>
 
 using namespace std;
 
-void Exam::show(vector<Exam>UPSC)::iterator i;
-	for(int i=UPSC.begin();i!=UPSC.end();++i)
-	{
-		cout<<"startDate"<<","<<"endDate"<<","<<"State"<<endl;
-		cout<<i->startDate<<","<<i->endDate<<","<<i->State<<endl;
-	}
-UPSC::UPSC(string startDate,string endDate,string State){
+UPSC::UPSC(string CandidateId,string Candidatename,string ExamId,string startDate,string endDate,string state){
 	this->startDate=startDate;
 	this->endDate=endDate;
-	this->State=State;
-	}
-string startDate::getstartDate(){
+	this->state=state;
+}
+
+string UPSC::getstartDate(){
 	return startDate;
 }
-string endDate::getendDate(){
+string UPSC::getendDate(){
 	return endDate;
 }
-string State::getState(){
-	return State;
+string UPSC::getstate(){
+	return state;
 }
-virtual void displayUPSC() const{
-	cout<<startDate<<","<<endDate<<","<<State<<endl;
-};
+
+void UPSC::displayCandidate() const{
+	Candidate::displayCandidate();
+	cout<<","<<startDate<<","<<endDate<<","<<state<<endl;
+}

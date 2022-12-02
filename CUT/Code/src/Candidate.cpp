@@ -1,42 +1,34 @@
 #include <iostream>
-#include <string>
+#include <algorithm>
 #include <vector>
 #include <Candidate.h>
-#include <iterator>
 
 using namespace std;
 
-void Candidate::show(vector<Candidate> Candidate){
-	vector<Candidate>::iterator i;
-	for(int i=Candidate.begin();i!=Candidate.end();++i)
+void Candidate::show(vector<Candidate> Candidates){
+	vector<Candidate>::iterator it;
+	for(it=Candidates.begin();it!=Candidates.end();++it)
 	{
-		cout<<"Candidate Id:"<<"Candidate name:"<<endl;
-		cout<<i->Candidate Id<<i->Candidate name<<endl;
+		cout<<"CandidateId:"<<"Candidatename:"<<"ExamId:"<<endl;
+		cout<<it->CandidateId<<it->Candidatename<<it->ExamId<<endl;
 	}
 }
-Candidate::Candidate(){
-}
-void Candidate::setId(int Id){
-	this->Id=Id;
-}
-void Candidate::setName(string name){
-	this->name=name;
-}
 
-Candidate::Candidate(int Id,string name){
-	this->Id=Id;
-	this->name=name;
+Candidate ::Candidate(string CandidateId,string Candidatename,string ExamId){
+	this->CandidateId=CandidateId;
+	this->Candidatename=Candidatename;
+	this->ExamId=ExamId;
 	}
-int Candidate::getId(){
-	return Id;
+string Candidate::getCandidateId(){
+	return CandidateId;
 }
-string Candidate::getName(){
-	return name;
+string Candidate::getCandidatename(){
+	return Candidatename;
 }
-void displayCandidate(){
-	cout<<"Candidate Id is:"<<Id<<endl;
-	cout<<"Candidate Name is:"<<name<<endl;
-}
-Candidate::~Candidate(){
+string Candidate::getExamId(){
+	return ExamId;
 }
 
+void Candidate::displayCandidate() const{
+	cout<<CandidateId<<","<<Candidatename<<","<<ExamId<<endl;
+};

@@ -1,24 +1,16 @@
 #include <iostream>
-#include <string>
-#include <vector>
-#include <iterator>
+#include <NEET.h>
 
 using namespace std;
 
-void Exam::show(vector<Exam>NEET)::iterator i;
-	for(int i=NEET.begin();i!=NEET.end();++i)
-	{
-		cout<<"YearofPassing"<<endl;
-		cout<<i->YearofPassing<<endl;
-	}
-NEET::NEET(int YearofPassing){
+NEET::NEET(string CandidateId,string Candidatename,string ExamId,int YearofPassing){
 	this->YearofPassing=YearofPassing;
-	
-	}
-int YearofPassing::getYearofPassing(){
+}
+int NEET::getYearofPassing(){
 	return YearofPassing;
 }
 
-virtual void displayNEET() const{
-	cout<<YearofPassing<<endl;
-};
+void NEET::displayCandidate() const{
+	Candidate::displayCandidate();
+	cout<<","<<YearofPassing<<endl;
+}
